@@ -18,6 +18,8 @@ add_executable(Vengine src/main.cpp
         src/app-controller.h
         src/ven-pipeline.cpp
         src/ven-pipeline.h
+        src/ven_device.h
+        src/ven_device.cpp
 )
 
 # Link libraries

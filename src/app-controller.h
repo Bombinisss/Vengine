@@ -6,13 +6,13 @@ namespace Ven {
 
 	class AppController {
 	 public:
-		static constexpr int WIDTH = 800;
-		static constexpr int HEIGHT = 600;
+		static constexpr int width = 800;
+		static constexpr int height = 600;
 
 		void Run();
 
 	 private:
-		VenWindow venWindow{WIDTH, HEIGHT, "Hello Vulkan!"};
+		VenWindow venWindow{ width, height, "Hello Vulkan!"};
 		VenPipeline venPipeline{"./shaders/simple_shader.vert.spv", "./shaders/simple_shader.frag.spv"};
 	};
 

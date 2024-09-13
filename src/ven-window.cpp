@@ -1,6 +1,6 @@
 #include "ven-window.h"
 
-#include <utility>
+#include <stdexcept>
 
 namespace Ven
 {
@@ -21,5 +21,10 @@ namespace Ven
 	}
 	bool VenWindow::ShouldClose() {
 		return glfwWindowShouldClose(window);
+	}
+	void VenWindow::CreateWindowSurface(VkInstance instance, VkSurfaceKHR* surface) {
+		if (glfwCreateWindowSurface(instance, window, nullptr, surface) != VK_SUCCESS) {
+			throw std::runtime_error("failed to create window surface");
+		}
 	}
 } // Ven
