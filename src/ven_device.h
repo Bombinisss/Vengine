@@ -45,9 +45,9 @@ class VenDevice {
   VkQueue GraphicsQueue() { return graphicsQueue_; }
   VkQueue PresentQueue() { return presentQueue_; }
 
-  SwapChainSupportDetails getSwapChainSupport() { return QuerySwapChainSupport(physicalDevice); }
+  SwapChainSupportDetails GetSwapChainSupport() { return QuerySwapChainSupport(physicalDevice); }
   uint32_t FindMemoryType(uint32_t typeFilter, VkMemoryPropertyFlags flags);
-  QueueFamilyIndices findPhysicalQueueFamilies() { return FindQueueFamilies(physicalDevice); }
+  QueueFamilyIndices FindPhysicalQueueFamilies() { return FindQueueFamilies(physicalDevice); }
   VkFormat FindSupportedFormat(
       const std::vector<VkFormat> &candidates, VkImageTiling tiling, VkFormatFeatureFlags features);
 

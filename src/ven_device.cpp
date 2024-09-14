@@ -180,7 +180,7 @@ void VenDevice::CreateLogicalDevice() {
 }
 
 void VenDevice::CreateCommandPool() {
-  QueueFamilyIndices queueFamilyIndices = findPhysicalQueueFamilies();
+  QueueFamilyIndices queueFamilyIndices = FindPhysicalQueueFamilies();
 
   VkCommandPoolCreateInfo poolInfo = {};
   poolInfo.sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO;

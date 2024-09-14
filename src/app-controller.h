@@ -1,6 +1,7 @@
 #pragma once
 #include "ven-window.h"
 #include "ven-pipeline.h"
+#include "ven_device.h"
 
 namespace Ven {
 
@@ -13,7 +14,8 @@ namespace Ven {
 
 	 private:
 		VenWindow venWindow{ width, height, "Hello Vulkan!"};
-		VenPipeline venPipeline{"./shaders/simple_shader.vert.spv", "./shaders/simple_shader.frag.spv"};
+		VenDevice venDevice{venWindow};
+		VenPipeline venPipeline{venDevice, "./shaders/simple_shader.vert.spv", "./shaders/simple_shader.frag.spv", VenPipeline::defaultPipelineConfigInfo(width, height)};
 	};
 
 } // Ven
