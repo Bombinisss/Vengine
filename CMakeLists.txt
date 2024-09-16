@@ -1,4 +1,8 @@
 cmake_minimum_required(VERSION 3.29)
+
+# Set Vcpkg toolchain file
+include(C:/vcpkg/scripts/buildsystems/vcpkg.cmake)
+
 project(Vengine)
 
 set(CMAKE_CXX_STANDARD 20)
